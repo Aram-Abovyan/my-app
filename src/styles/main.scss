@@ -1,0 +1,8 @@
+@use 'color-variables';
+
+body {
+  background-color: color-variables.$body-background;
+  border-radius: 24px;
+  margin: 0;
+  padding: 0;
+}

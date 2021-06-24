@@ -1,0 +1,37 @@
+@use 'color-variables';
+
+.vertical-navbar {
+  background-color: color-variables.$vertical-navbar-background;
+  position: absolute;
+  left: 0px;
+  width: 10%;
+  height: 100%;
+  border-radius: 24px 0 0 24px;
+  padding-top: 50px;
+}
+
+.horizontal-navbar {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  top: 0px;
+  border: 1px solid black;
+  height: 150px;
+  width: 74%;
+  margin-left: 10%;
+  padding: 0 8%;
+  div {
+    border: 1px solid black;
+  }
+}
+
+.link {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+  color: color-variables.$active-link;
+  padding-left: 5%;
+}
