@@ -8,7 +8,7 @@ function App() {
       <VerticalNavbar />
       <HorizontalNavbar />
       <Body />
-    </div>
+    </div>    
   );
 }
 

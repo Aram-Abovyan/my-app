@@ -6,7 +6,7 @@ interface Value {
 
 export const Title = ({ value }:Value) => {
   return (
-    <div className="title-wrap">
+    <div>
       <h1 className="title">{value}</h1>
     </div>
   );
