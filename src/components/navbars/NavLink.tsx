@@ -1,11 +1,13 @@
-interface Value {
+interface Props {
   value: string;
+  store: any;
+  handleClick: any;
 }
 
-export const NavLink = ({ value }: Value) => {
+export const NavLink = ({ value, store, handleClick }: Props) => {
   return (
     <div className="link">
-      <a>{value}</a>
+      <a onClick={handleClick}>{value}</a>
     </div>
   );
 }
