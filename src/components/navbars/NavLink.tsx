@@ -2,7 +2,7 @@ interface Value {
   value: string;
 }
 
-export const Link = ({ value }: Value) => {
+export const NavLink = ({ value }: Value) => {
   return (
     <div className="link">
       <a>{value}</a>

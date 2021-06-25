@@ -1,15 +1,15 @@
 import '../../styles/navbar.scss';
 import { Title } from './Title';
-import { Link } from './Link';
+import { NavLink } from './NavLink';
 
 export const HorizontalNavbar = () => {
   return (
     <div className="horizontal-navbar">
       <Title value={'Courses'} />
       <div className="links">
-        <Link value={'Popular'} />
-        <Link value={'Favorite'} />
-        <Link value={'New'} />
+        <NavLink value={'Popular'} />
+        <NavLink value={'Favorite'} />
+        <NavLink value={'New'} />
       </div>      
     </div>
   );

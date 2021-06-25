@@ -37,11 +37,13 @@ const initialDate:any = new Date();
 
 export const imagesData:any[] = images.map((url, index) => {
   const rating = index < 10 ? 1 : index < 20 ? 2 : 3;
+  const views = index < 10 ? 10 : index < 20 ? 20 : 30;
   const date = initialDate - index * 1000;
   return {
     id: uuidv4(),
     url,
     rating,
     date,
+    views,
   };
 });

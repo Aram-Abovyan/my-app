@@ -1,16 +1,11 @@
 import '../../styles/body.scss';
 import { Scrollbars } from 'react-custom-scrollbars';
-import { Card } from './Card';
-import { imagesData } from '../../data/images';
 
-export const Body = () => {
-  const cards:any[] = imagesData.map(({ id, url }) => (
-    <Card
-      key={id}
-      img={url}
-    />
-  ))
+interface Children {
+  children: any;
+}
 
+export const Body = ({children}:Children) => {
   return (
     <div className="body">
       <Scrollbars
@@ -18,7 +13,7 @@ export const Body = () => {
         thumbSize={100}
         className="scrollbar"
       >
-        {cards}
+        {children}
       </Scrollbars>
     </div>
   );
