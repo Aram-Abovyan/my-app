@@ -30,7 +30,7 @@ const handleFilter: handleFilter = {
 
 export const Dashboard = observer(({ store }: Store) => {
 
-  const cards = handleFilter[store.filter](store.items).map(({ id, url }: Card) => (
+  const cards = handleFilter[store.filter] && handleFilter[store.filter](store.items).map(({ id, url }: Card) => (
     <Card
       key={id}
       img={url}

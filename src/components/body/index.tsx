@@ -12,6 +12,7 @@ export const Body = ({children}:Children) => {
         style={{width: '100%', height:window.innerHeight - 150}}
         thumbSize={100}
         className="scrollbar"
+        renderThumbVertical={props => <div {...props} className="thumb-vertical"/>}
       >
         {children}
       </Scrollbars>

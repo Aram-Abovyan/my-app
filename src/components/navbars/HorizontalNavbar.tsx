@@ -1,17 +1,23 @@
 import '../../styles/navbar.scss';
 import { Title } from './Title';
-import { NavLink } from './NavLink';
+// import { NavLink } from './NavLink';
 import { store } from '../../data/store';
 
-export const HorizontalNavbar = () => {
-  const handleClick = (filter: string) => () => {
-    store.changeFilter(filter);
-  }
+interface Props {
+  title: string;
+  children: any;
+}
+
+export const HorizontalNavbar = ({ title, children }: Props) => {
+  // const handleClick = (filter: string) => () => {
+  //   store.changeFilter(filter);
+  // }
   return (
     <div className="horizontal-navbar">
-      <Title value={'Courses'} />
+      <Title value={title} />
       <div className="links">
-        <NavLink
+        {children}
+        {/* <NavLink
           store={store}
           handleClick={handleClick('popular')}
           value={'Popular'}
@@ -25,7 +31,7 @@ export const HorizontalNavbar = () => {
           store={store}
           handleClick={handleClick('new')}
           value={'New'}
-        />
+        /> */}
       </div>      
     </div>
   );
